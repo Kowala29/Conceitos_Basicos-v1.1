@@ -45,3 +45,11 @@ Console.WriteLine("Informe o Número.");
 n1 = double.Parse(Console.ReadLine());
 
 Console.WriteLine($"O resultado do Fatorial de {n1} é {fatorial.Fatorial_numero(n1)}");
+
+//Primo
+int n2;
+
+Console.WriteLine("Insira o Número");
+n2 = int.Parse(Console.ReadLine());
+
+Console.WriteLine($"O Número {n2} {Primo.Validar(n2)}");

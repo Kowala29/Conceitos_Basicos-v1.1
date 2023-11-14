@@ -6,7 +6,7 @@ namespace Teste_Conceitos_Basicos
     public class UnitTest1
     {
         private int num1, num2, resultado;
-        private double numf, verificar;
+        private double numf;
 
         [TestMethod]
         public void TestaSomaDoisNumerosInteros()
@@ -71,16 +71,13 @@ namespace Teste_Conceitos_Basicos
 
         [TestMethod]
         public void Verifica_Fatorial() {
-            //Cenário e Ação
+            //Cenário
             
-           Fatorial fatorial = new Fatorial();
-
-            verificar = fatorial.Fatorial_numero(numf);
+            Fatorial fatorial = new Fatorial();
             InicializaVariaveis();
+            //Ação e Verificãção
 
-            //Verificãção
-
-            Assert.AreEqual(120, verificar);
+            Assert.AreEqual(120, fatorial.Fatorial_numero(numf));
 
         }
     }
