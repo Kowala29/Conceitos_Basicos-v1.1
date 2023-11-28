@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,26 +12,42 @@ namespace AulasPOO.Model
     //permita também criar contas informando apenas o número ou apenas o saldo
     public class Conta
     {
-            private long _numeroConta;
-            public long NumeroConta {
-            get { 
-                return _numeroConta;
+
+        private Cliente _titular;
+        public Cliente Titular {
+            get 
+            {
+                return _titular;
             }
-            private set { 
-                _numeroConta = value;
-            } 
+            set 
+            {
+                _titular = value;
+            }
+        }
+        private long _numeroConta;
+        public long NumeroConta {
+        get { 
+            return _numeroConta;
+        }
+        private set { 
+            _numeroConta = value;
+        } 
         }
 
-            private decimal _saldo;
-            public decimal Saldo { get 
-            { 
-                return _saldo;
-            }
-            private set
-            {
-                _saldo = value;
-            } 
+        private decimal _saldo;
+        public decimal Saldo { 
+        get 
+        { 
+            return _saldo;
         }
+        private set
+        {
+            _saldo = value;
+        }
+
+        }
+
+
         public Conta(long numeroConta, decimal saldo)
         {
             _numeroConta = numeroConta;
@@ -40,5 +57,6 @@ namespace AulasPOO.Model
         {
 
         }
+        
     }
 }

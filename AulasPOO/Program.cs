@@ -1,6 +1,6 @@
 ﻿/*
  * O projeto devera conter uma classe cliente que pussiu nome, endereço, telefone e data de nascimento
- * a classe mcliente será criada dentro de uma pasta chamada Model
+ * a classe cliente será criada dentro de uma pasta chamada Model
  * Deverá ser possivel verificar a idade do cliente a partir de um método da própria classe
  */
 
@@ -27,3 +27,7 @@ var conta1 = new Conta(123456, 1000.99m);
 //conta1.Saldo = 1000.99m;
 Console.WriteLine($"Conta {conta1.NumeroConta} com saldo de {conta1.Saldo}");
 
+var cliente1 = new Cliente("Fulano", "12345678901");
+
+conta1.Titular = cliente1;
+Console.WriteLine($"Conta {conta1.NumeroConta} pertence à {conta1.Titular.Nome}");

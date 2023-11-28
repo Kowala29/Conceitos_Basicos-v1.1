@@ -9,17 +9,14 @@ namespace TestesAulasPOO
         public void  TestaConstrutorDefaultCliente()
         {
             //Este código verifica a crianção de instancias da classe cliente pelo construtor default
-            var cliente = new Cliente();
-            //Cenário, Ação e Teste
-            Assert.IsInstanceOfType(new Cliente());
+            //Cenário,
+            
+            string nome = "Fulano";
+            string cpf = "1234567890";
 
-
-            /*
-            string nome = "Eduardo";
-            string endreco = "Rua Preguiça";
-            int telefone = 1224221;
-            DateTime dataNascimento = 29/12/2004;
-            */
+            //Ação e Teste
+            Cliente cliente = new Cliente();
+            Assert.IsInstanceOfType(cliente, typeof(Cliente));
         }
 
         [TestMethod]
@@ -27,6 +24,37 @@ namespace TestesAulasPOO
         {
             //Este código verifica a crianção de instancias da classe cliente informando o seu nome
 
+            //Cenário
+            string nome = "Fulano";
+            var cliente = new Cliente(nome);
+
+            //Ação e Teste
+            Assert.IsInstanceOfType(cliente, typeof(Cliente));
+        }
+
+        [TestMethod]
+        public void TestaConstrutorClienteComNomeECPF()
+        {
+            //Este código verifica a crianção de instancias da classe cliente informando o seu nome
+
+            //Cenário
+            string nome = "Fulano";
+            string cpf = "1234567890";
+            var cliente = new Cliente(nome, cpf);
+
+            //Ação e Teste
+            Assert.IsInstanceOfType(cliente, typeof(Cliente));
+        }
+        [TestMethod]
+        public void TestaCpfDiferente11Digitos()
+        {
+            //Cenário
+            string nome = "Fulano";
+            string cpf = "1234567890";
+            //var cliente = new Cliente(nome, cpf);
+
+            //Ação e Teste
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Cliente(nome, cpf));
         }
     }
 }
