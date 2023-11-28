@@ -47,6 +47,19 @@ namespace AulasPOO.Model
 
         }
 
+        public decimal Deposito(decimal deposito)
+        {
+            return Saldo = deposito + Saldo;
+        }
+
+        public decimal Saque(decimal saque)
+        {
+            if (saque > Saldo)
+            {
+                Console.WriteLine("Você não pode Sacar essa quantia");
+            }
+            return Saldo = Saldo - saque;
+        }
 
         public Conta(long numeroConta, decimal saldo)
         {

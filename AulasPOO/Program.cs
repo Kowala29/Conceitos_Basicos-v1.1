@@ -6,6 +6,7 @@
 
 using AulasPOO.Model;
 
+/*
 Console.WriteLine("Entre com o Nome:");
 string nome = Console.ReadLine();
 
@@ -22,12 +23,21 @@ Console.WriteLine(Cliente.IdadeCliente(dataNascimento));
 
 //Crie uma classe Conta, que possua o atributo e propriedade Número e Saldo
 
-var conta1 = new Conta(123456, 1000.99m);
+var conta1 = new Conta();
 //conta1.NumeroConta = 123456;
 //conta1.Saldo = 1000.99m;
-Console.WriteLine($"Conta {conta1.NumeroConta} com saldo de {conta1.Saldo}");
+//Console.WriteLine($"Conta {conta1.NumeroConta} com saldo de {conta1.Saldo}");
 
 var cliente1 = new Cliente("Fulano", "12345678901");
 
 conta1.Titular = cliente1;
 Console.WriteLine($"Conta {conta1.NumeroConta} pertence à {conta1.Titular.Nome}");
+*/
+
+var conta2 = new Conta(1213,1000);
+
+Console.WriteLine($"Saldo {conta2.Saldo}");
+conta2.Deposito(1000);
+Console.WriteLine($"Saldo {conta2.Saldo}");
+conta2.Saque(500);
+Console.WriteLine($"Saldo {conta2.Saldo}");
